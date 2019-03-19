@@ -1,7 +1,7 @@
 const apiKey = '8348f21dc81c4e5083d3195573bc7ec4';
 const main = document.querySelector('main');
 const sourceSelector = document.querySelector('#sourceSelector');
-const defaultSource = 'the-verge';
+const defaultSource = 'ign';
 
 window.addEventListener('load', async e => {
     updateNews();
@@ -23,14 +23,14 @@ window.addEventListener('load', async e => {
 });
 
 async function updateSources() {
-    const res = await fetch(`https://newsapi.org/v2/sources?apiKey=${apiKey}`);
+    const res = await fetch(`https://newsapi.org/v2/sources?language=en&apiKey=${apiKey}`);
     const json = await res.json();
 
     sourceSelector.innerHTML = json.sources.map(src => `<option value="${src.id}">${src.name}</option>`).join('\n');
 }
 
 async function updateNews(source = defaultSource) {
-    const res = await fetch(`https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`);
+    const res = await fetch(`https://newsapi.org/v2/everything?pageSize=20&sources=${source}&apiKey=${apiKey}`);
     const json = await res.json();
 
     main.innerHTML = json.articles.map(createArticle).join('\n');
