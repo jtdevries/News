@@ -1,7 +1,7 @@
 const apiKey = '8348f21dc81c4e5083d3195573bc7ec4';
 const main = document.querySelector('main');
 const sourceSelector = document.querySelector('#sourceSelector');
-const defaultSource = 'ign';
+const defaultSource = 'polygon';
 
 window.addEventListener('load', async e => {
     updateNews();
