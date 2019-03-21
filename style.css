@@ -87,14 +87,6 @@ body {
     margin: 5px;
     margin-top: 20px;
   }
-
-  .articleDate {
-    margin:0;
-    bottom: 0px;
-    font-size: 15px;
-    opacity: 0.5;
-    float: right;
-  }
   
   .article a,
   .article a:visited {

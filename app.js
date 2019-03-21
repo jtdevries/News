@@ -62,7 +62,6 @@ function createArticle(article) {
             <img src="${article.urlToImage}" alt="${article.title}">
                 <h2>${article.title}</h2>
             <p class="articleText">${article.description}</p>
-            <p class="articleDate">${article.publishedAt}</p>
         </a>
     </div>
     `;
