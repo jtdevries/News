@@ -13,6 +13,7 @@ window.addEventListener('load', async e => {
 
     // Get selected Source
     sourceSelector.addEventListener('change', e =>{
+        defaultSource = sourceSelector.value;
         updateNews(e.target.value);
     });
 
@@ -60,7 +61,8 @@ function createArticle(article) {
         <a href="${article.url}" target="_blank">
             <img src="${article.urlToImage}" alt="${article.title}">
                 <h2>${article.title}</h2>
-            <p>${article.description}</p>
+            <p class="articleText">${article.description}</p>
+            <p class="articleDate">${article.publishedAt}</p>
         </a>
     </div>
     `;
