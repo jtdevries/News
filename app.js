@@ -48,7 +48,7 @@ async function updateSources() {
 }
 
 async function updateNews(source = defaultSource, page = defaultPage) {
-    const res = await fetch(`https://newsapi.org/v2/everything?language=en&pageSize=10&page=${page}&sources=${source}&apiKey=${apiKey}`);
+    const res = await fetch(`https://newsapi.org/v2/everything?language=en&pageSize=12&page=${page}&sources=${source}&apiKey=${apiKey}`);
     const json = await res.json();
 
     main.innerHTML = json.articles.map(createArticle).join('\n');
@@ -67,3 +67,5 @@ function createArticle(article) {
     </div>
     `;
   }
+
+  

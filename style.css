@@ -31,16 +31,22 @@ body {
     color: lightgrey;
   }
   
-  select, button {
+  select, button{
     height: 40px;
     background-color: #626262;
     margin: 20px;
     color: #fff;
     border-radius: 0px;
     border: 0px solid #000;
+    text-decoration: none;
   }
   .buttons {
     text-align: center;
+  }
+
+  .backToTop {
+    text-decoration: none;
+    color: white;
   }
   
   .article {
@@ -119,3 +125,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
