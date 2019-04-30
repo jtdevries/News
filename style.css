@@ -38,20 +38,16 @@ body {
     background-color: #626262;
     margin: 20px;
     color: #fff;
-    border-radius: 0px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
     border: 0px solid #000;
     text-decoration: none;
   }
-  button {
-    animation: hoverout 1s;
-  }
 
-  button:hover {
-    animation: hoverin 1s;
-  }
-  .buttons {
-    text-align: center;
-  }
+  button        { animation: hoverout 0.5s; }
+  button:hover  { animation: hoverin 0.5s; 
+                  background-color: black;}
+  .buttons      { text-align: center; }
 
   .backToTop {
     text-decoration: none;
@@ -61,58 +57,58 @@ body {
   .article {
     background-color: #424242;
     margin: 20px;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
     animation: out 0.5s;
   }
   .article:hover {
-    box-shadow: 0px 0px 20px 1px black;
+    box-shadow: 0px 0px 25px 1px black;
     animation: in 0.5s;
   }
 
   @keyframes hoverin {
-    0%    {
-           background-color: #626262;
-          }
-    100%  {
-           background-color: black;
-          }
+    0%    { background-color: #626262; }
+    100%  { background-color: black; }
   }
 
   @keyframes hoverout {
-    0%    {
-           background-color: black;
-          }
-    100%  {
-           background-color: #626262;
-          }
+    0%    { background-color: black; }
+    100%  { background-color: #626262; }
   }
 
   @keyframes in{
-    0%    {
-           box-shadow: 0px 0px 0px 0px black;
-          }
-    100%  {
-           box-shadow: 0px 0px 25px 1px black;
-           
-          }
+    0%    { box-shadow: 0px 0px 0px 0px black; }
+    100%  { box-shadow: 0px 0px 25px 1px black; }
   }
 
   @keyframes out{
-    0%    {
-            box-shadow: 0px 0px 25px 1px black;
-          }
-    100%  {
-            box-shadow: 0px 0px 0px 0px black;
-          }
+    0%    { box-shadow: 0px 0px 25px 1px black; }
+    100%  { box-shadow: 0px 0px 0px 0px black; }
   }
 
   .article h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 5px;
+    margin: 10px;
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+
+  hr {
+    width: 50%;
+    opacity: 0.1;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .articleInfo {
     margin: 5px;
     margin-top: 20px;
+  }
+
+  .articleText {
+    padding: 20px;
+    padding-top: 0px;
   }
   
   .article a,
@@ -123,25 +119,18 @@ body {
   
   .article img {
     width: 100%;
+    border-top-right-radius: 50px;
   }
 
 /* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
+::-webkit-scrollbar { width: 10px; }
 
 /* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
+::-webkit-scrollbar-track { background: #f1f1f1; }
  
 /* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
+::-webkit-scrollbar-thumb { background: #888; }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
+::-webkit-scrollbar-thumb:hover { background: #555; }
 

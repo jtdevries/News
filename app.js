@@ -56,11 +56,13 @@ async function updateNews(source = defaultSource, page = defaultPage) {
 
 // Load Article
 function createArticle(article) {
+    let image = article.urlToImage ? article.urlToImage : './images/noimage.png';
     return `
     <div class="article">
         <a href="${article.url}" target="_blank">
-            <img src="${article.urlToImage}" alt="${article.title}">
+            <img src="${image}" alt="${article.title}">
                 <h2>${article.title}</h2>
+                <hr>
             <p class="articleText">${article.description}</p>
         </a>
     </div>
